@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'inter-regular';
+    src: url(fonts/Inter_28pt-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'inter-light';
+    src: url(fonts/Inter_28pt-Light.ttf);
+}
+
+body {
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; /* Remove apenas a barra de rolagem horizontal */
+}
+
+header {
+    height: 120px;
+    padding: 0 50px;
+    background-color: #015170;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    background-image: url(img/Ss.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'inter-light';
+    font-size: 1rem;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.navbar-right {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.navbar-right p {
+    font-family: 'inter-light';
+    cursor: pointer;
+}
+
+.btn-dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.fundo-btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+}
+
+#img-dark-mode {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* css do carrossel:  */
+
+/* .container: Centraliza o carrossel e adiciona espaçamento vertical. */
+/* .slider: Define a área visível, limita o tamanho e esconde as partes 
+dos slides que excedem a largura visível (overflow: hidden). */
+/* .list: Um contêiner flexível que posiciona os slides lado a lado (display: flex),
+permitindo o deslocamento horizontal. */
+/* .item: Contém cada slide, com imagem e texto. */
+/* .buttons: Posiciona os botões laterais. */
+/* .dots: Alinha os pontos indicadores na base. */
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.slider{
+    width: 100vw;
+    aspect-ratio: 1440 / 730;
+    position: relative;
+    overflow: hidden; /* Mantém o conteúdo do carrossel dentro dos limites */
+    margin: auto; /* Centraliza horizontalmente */
+   
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list img{
+    width: 100vw; /* Largura proporcional */
+    height: auto; /* Ajusta altura automaticamente */
+}
+
+.item-1 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.item-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-3 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.item-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-e-btn-1 {
+    width: fit-content;
+    position: absolute;
+    padding-right: 1%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 10;
+}
+
+.texto-e-btn-2 {
+    width: fit-content;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 10;
+}
+
+.texto-e-btn-3 {
+    width: fit-content;
+    position: absolute;
+    padding-left: 1.5%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 10;
+}
+
+.texto-e-btn-4 {
+    width: fit-content;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 10;
+}
+
+.titulo-item-1 {
+    width: auto;
+    height: auto;
+    text-align: right;
+    color: #fff;
+    text-shadow: 0 0 5px #272727
+}
+
+.titulo-item-2 {
+    width: auto;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #272727
+}
+
+.titulo-item-3 {
+    width: auto;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #272727
+}
+
+.titulo-item-4 {
+    width: auto;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #272727
+}
+
+.titulo-item-1 h1 {
+    font-size: 40px;
+    font-family: 'inter-light';
+}
+
+.titulo-item-2 h1 {
+    font-size: 40px;
+    font-family: 'inter-light';
+}
+
+.titulo-item-3 h1 {
+    font-size: 40px;
+    font-family: 'inter-light';
+}
+
+.titulo-item-4 h1 {
+    font-size: 40px;
+    font-family: 'inter-light';
+}
+
+.btn-saiba-mais-1, 
+.btn-saiba-mais-2,
+.btn-saiba-mais-3,
+.btn-saiba-mais-4 {
+    background-color: transparent; 
+    color: #ffffff; 
+    border: 2px solid #ffffff;
+    padding: 10px 50px; 
+    cursor: pointer; 
+    font-size: 30px; 
+    font-family: 'inter-light';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+.btn-saiba-mais-1:hover,
+.btn-saiba-mais-2:hover,
+.btn-saiba-mais-3:hover,
+.btn-saiba-mais-4:hover {
+    background-color:#ffffff;
+    color: #013A50; 
+    border: 2px solid transparent;
+}
+
+.efeito-cor {
+    width: 100%;
+    height: 100%;
+    background-color: #013A50;
+    opacity: 20%;
+    position: absolute;
+    z-index: 5;
+}
+
+/* Container dos botões laterais */
+.slider .buttons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: space-between;
+    z-index: 8;
+    pointer-events: none; /* Impede interferência nas áreas invisíveis */
+}
+
+/* Botões individuais */
+.slider .buttons button {
+    width: 50px; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 50px;
+    cursor: pointer;
+    pointer-events: auto; /* Reativa eventos apenas no botão */
+}
+
+
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 8;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 8;
+}
+.slider .dots li.active{
+     width: 30px; /*tamanho do botão quando ativado */
+     cursor: pointer;
+     z-index: 8;
+}
