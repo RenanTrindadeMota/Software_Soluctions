@@ -308,7 +308,8 @@ permitindo o deslocamento horizontal. */
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
+    padding-right: 3px;
     display: flex;
     justify-content: space-between;
     z-index: 8;
@@ -357,4 +358,78 @@ permitindo o deslocamento horizontal. */
      width: 30px; /*tamanho do botão quando ativado */
      cursor: pointer;
      z-index: 8;
+}
+
+/* conteúdo do site após carrossel */
+
+.container2 {
+    width: 100%;
+    padding: 110px 110px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.quadro1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+}
+
+.content1 {
+    width: 60%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 40px;
+    /* background-color: aqua; */
+}
+
+.content1 h1 {
+    color: #015170; 
+    font-size: 2.6rem;
+    font-weight: 200;
+    font-family: 'inter-light';
+}
+
+.content1 p {
+    width: 90%;
+    font-size: 1.5rem;
+    line-height: 1.5; /* Espaçamento entre linhas 1.5 vezes o tamanho da fonte */
+    text-align: justify;
+    font-family: 'inter-light';
+}
+
+.btn-saiba-mais {
+    background-color: transparent; 
+    color: #013A50; 
+    border: 2px solid #013A50;
+    padding: 10px 50px; 
+    cursor: pointer; 
+    font-size: 30px; 
+    font-family: 'inter-light';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+.btn-saiba-mais:hover {
+    background-color:#013A50;
+    color: #ffffff; 
+    border: 2px solid transparent;
+}
+
+.img-quadro1 {
+    width: 40%;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background-image: url(img/image5-introducao.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
